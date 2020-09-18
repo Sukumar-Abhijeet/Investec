@@ -35,8 +35,7 @@ const LoginScreen = ({...props}) =>{
             Toast.show('Empty UserName');
     };
 
-    const renderNameBox = () =>{
-        return(
+    const renderNameBox = () =>(
             <View style={styles.inputWrapper}>
             <TextInput
                 autoFocus={true}
@@ -60,7 +59,6 @@ const LoginScreen = ({...props}) =>{
             </TouchableOpacity>
             </View>
         );
-    };
 
     return(
         <SafeAreaView style={styles.mainContainer}>
