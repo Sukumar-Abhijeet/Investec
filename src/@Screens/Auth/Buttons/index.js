@@ -3,10 +3,9 @@
  */
 
 import React,{useState} from 'react';
-import { SafeAreaView,Text,StatusBar,View,Image,Modal } from 'react-native';
+import { SafeAreaView,Text,StatusBar,View,Image,Modal,TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import styles from './styles';
 import SwipeButton from 'rn-swipe-button';
 import Toast from 'react-native-simple-toast';
@@ -35,7 +34,7 @@ const ButtonScreen = ({...props}) =>{
         railBorderColor={'#34424b'}
         railFillBorderColor={'#6eb1f7'}
         railFillBackgroundColor={'#6eb1f7'}
-
+        titleStyles={styles.titleStyle}
         thumbIconBackgroundColor={'#6eb1f7'}
         thumbIconBorderColor={'#6eb1f7'}
         thumbIconStyles={styles.thumbIconContainer}

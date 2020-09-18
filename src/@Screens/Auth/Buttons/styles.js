@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
     thumbIconContainer:{
         borderRadius:moderateScale(8),
     },
+    titleStyle:{
+        fontSize:moderateScale(12)
+    },
     centeredView: {
         
         alignSelf:'center',
