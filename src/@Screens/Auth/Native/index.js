@@ -8,19 +8,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styles from './styles';
 
-const NativeDeviceAndroid = NativeModules.NativeDeviceModule;
-const NativeDeviceIOS =NativeModules.NativeDevice;
+const {NativeDeviceModule,NativeDevice} = NativeModules;
+const NativeDeviceAndroid =NativeDeviceModule;
+const NativeDeviceIOS =NativeDevice;
 
 const NativeScreen = ({...props}) =>{
 
     const {userName,navigation:{navigate}} = props;
-
     const [isNotDevice , setIsNotDevice] = useState(false);
 
     useEffect(()=>{
         checkDevice();
     },[])
 
+    // CHECK SIMULATOR/EMULATOR FROM NATIVE MODULES
     const checkDevice = async() =>{
         let isEmulator = false;
         if(Platform.OS === 'ios')
@@ -29,21 +30,19 @@ const NativeScreen = ({...props}) =>{
             isEmulator = await NativeDeviceAndroid.isEmulator();
         setIsNotDevice(isEmulator);
     }
-
-    const renderName=()=>{
-        if(userName!=='')
-            return <Text style={styles.userName}>Welcome - {userName}</Text>;
-        return null;
-    }
-
+    
     const showNotice = () =>{
         if(isNotDevice)
             return(
-                <View>
-                    <Text> You are Running on Emulator</Text>
+                <View style={styles.noticeView}>
+                    <Text style={styles.noticeText}> You are Running on {Platform.OS === 'ios' ? 'Simulator' : 'Emulator'}</Text>
                 </View>
             )
-        
+        return null;
+    }
+    const renderName=()=>{
+        if(userName!=='')
+            return <Text style={styles.userName}>Welcome - {userName}</Text>;
         return null;
     }
 

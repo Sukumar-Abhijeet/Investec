@@ -31,6 +31,18 @@ const styles = StyleSheet.create({
     buttonWrapper:{
         flexDirection:'row',alignSelf:'center',
         position:'absolute',bottom:moderateScale(50)
+    },
+    noticeView:{
+        backgroundColor:'#000',
+        width:'90%',
+        alignSelf:'center',
+        borderRadius:moderateScale(5),
+        paddingVertical:moderateScale(10),
+    },
+    noticeText:{
+        color:'#fff',
+        fontWeight:'bold',
+        textAlign:'center'
     }
 });
 
