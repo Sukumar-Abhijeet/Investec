@@ -17,6 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* InvestecTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* InvestecTests.m */; };
 		326B5A4986030B07BD8ADC80 /* libPods-Investec-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C984FA4E936FBE5834A4F0 /* libPods-Investec-tvOS.a */; };
+		647B91912515E8CB000F3A8B /* NativeDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 647B91902515E8CB000F3A8B /* NativeDevice.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		84B89DA88CEA680A81E92687 /* libPods-Investec-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0301EED7671E1F49FC7637A /* libPods-Investec-tvOSTests.a */; };
 		9BED8DF11DDD212BA3AB0EBD /* libPods-Investec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC03A99073723CFDB56E90C2 /* libPods-Investec.a */; };
@@ -57,6 +58,8 @@
 		2D02E4901E0B4A5D006451C7 /* Investec-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Investec-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404C9E3B8196CA3F78EDD1CF /* libPods-Investec-InvestecTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Investec-InvestecTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		474F86FC1E55557C148224A2 /* Pods-Investec-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investec-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Investec-tvOS/Pods-Investec-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		647B918F2515E8CB000F3A8B /* NativeDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeDevice.h; sourceTree = "<group>"; };
+		647B91902515E8CB000F3A8B /* NativeDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeDevice.m; sourceTree = "<group>"; };
 		68C984FA4E936FBE5834A4F0 /* libPods-Investec-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Investec-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE1E10E7BB93B7C73B1C769 /* Pods-Investec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Investec.release.xcconfig"; path = "Target Support Files/Pods-Investec/Pods-Investec.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Investec/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				647B918F2515E8CB000F3A8B /* NativeDevice.h */,
+				647B91902515E8CB000F3A8B /* NativeDevice.m */,
 				13B07FAE1A68108700A75B9A /* Investec */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* InvestecTests */,
@@ -294,7 +299,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = D3TC9YDR73;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -569,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647B91912515E8CB000F3A8B /* NativeDevice.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -671,6 +677,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Investecnew;
 				PRODUCT_NAME = Investec;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Investec-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -697,6 +704,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Investecnew;
 				PRODUCT_NAME = Investec;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Investec-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

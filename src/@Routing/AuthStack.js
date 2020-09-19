@@ -32,7 +32,7 @@ const MainAppStack = createStackNavigator(
         }
     },
     {
-        initialRouteName: 'Login',
+        initialRouteName: 'Native',
     }
 );
 

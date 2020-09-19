@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         color:'#fff',
         alignSelf:'flex-end',
         margin:moderateScale(20),
-        fontSize:moderateScale(25),
+        fontSize:moderateScale(14),
         fontWeight:'bold'
     },
     textBox:{

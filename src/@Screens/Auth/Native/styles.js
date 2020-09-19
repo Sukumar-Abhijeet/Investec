@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         color:'#000',
         alignSelf:'flex-end',
         margin:moderateScale(20),
-        fontSize:moderateScale(25),
+        fontSize:moderateScale(14),
         fontWeight:'bold'
     },
     customButtons:{
