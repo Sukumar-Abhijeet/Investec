@@ -7,9 +7,9 @@ import configureMockStore from "redux-mock-store";
 import LoginScreen from '../src/@Screens/Auth/Login';
 
 const mockStore = configureMockStore();
-const store = mockStore({userData:"Sukumar Abhijeet"});
+const store = mockStore({userData:{userName:"Sukumar Abhijeet"}});
 
-const createTestProps = {
+export const createTestProps = {
   navigation: {
     state: { params: {} },
     dispatch: jest.fn(),

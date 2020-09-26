@@ -22,6 +22,7 @@ exports[`Testing Button Screen .js 1`] = `
     }
   >
     Welcome - 
+    Sukumar Abhijeet
   </Text>
   <View
     style={
@@ -177,7 +178,6 @@ exports[`Testing Button Screen .js 1`] = `
   <Modal
     animationType="slide"
     hardwareAccelerated={false}
-    onBackButtonPress={[Function]}
     onRequestClose={[Function]}
     transparent={true}
     visible={false}

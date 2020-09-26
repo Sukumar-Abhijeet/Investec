@@ -52,16 +52,13 @@ const NativeScreen = ({...props} : Props) =>{
         return null;
     };
 
-    const renderName=()=>{
-        if(userName!=='')
-            return <Text style={styles.userName}>Welcome - {userName}</Text>;
-        return null;
-    };
-
     return(
         <SafeAreaView style={styles.mainContainer}>
             <StatusBar backgroundColor={white} barStyle={'dark-content'} />
-            {renderName()}{showNotice()}
+            {
+                (userName!=='') && <Text style={styles.userName}>Welcome - {userName}</Text>
+            }
+            {showNotice()}
             <View style={styles.buttonWrapper}>
                 <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} />
                 <DefaultButton buttonText={'Check Login'} onPress={()=>navigate('Login')} />

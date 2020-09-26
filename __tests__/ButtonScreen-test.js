@@ -7,7 +7,7 @@ import configureMockStore from "redux-mock-store";
 import ButtonScreen from '../src/@Screens/Auth/Buttons';
 
 const mockStore = configureMockStore();
-const store = mockStore({userData:"Sukumar Abhijeet"});
+const store = mockStore({userData:{userName:"Sukumar Abhijeet"}});
 
 const createTestProps = {
   navigation: {

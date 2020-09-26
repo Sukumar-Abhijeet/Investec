@@ -23,6 +23,7 @@ exports[`Testing Button Screen .js 1`] = `
     }
   >
     Welcome - 
+    Sukumar Abhijeet
   </Text>
   <View
     style={

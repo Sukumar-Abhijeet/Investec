@@ -56,16 +56,12 @@ const ButtonScreen = ({...props}:Props) =>{
         );
     };
 
-    const renderName=()=>{
-        if(userName!=='')
-            return <Text style={styles.userName}>Welcome - {userName}</Text>;
-        return null;
-    };
-
     return(
         <SafeAreaView style={styles.mainContainer}>
             <StatusBar backgroundColor={secondary} barStyle={'light-content'} />
-            {renderName()}
+            {
+                (userName!=='') && <Text style={styles.userName}>Welcome - {userName}</Text>
+            }
             <View style={styles.buttonContainer}>
                 <DefaultButton buttonStyle={{backgroundColor:secondary}} buttonText={'Press me'} onPress={()=>setShowModal(true)} textStyle={{color:primaryText}} />
                 <DefaultButton buttonStyle={{backgroundColor:darkGrey}} buttonText={'Press me'} onPress={()=>setShowModal(true)} textStyle={{color:primaryText}} />

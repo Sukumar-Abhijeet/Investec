@@ -7,7 +7,7 @@ import configureMockStore from "redux-mock-store";
 import NativeScreen from '../src/@Screens/Auth/Native';
 
 const mockStore = configureMockStore();
-const store = mockStore({userData:"Sukumar Abhijeet"});
+const store = mockStore({userData:{userName:"Sukumar Abhijeet"}});
 
 const createTestProps = {
   navigation: {
