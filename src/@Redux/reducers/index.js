@@ -26,7 +26,7 @@ const AllReducers = {
 
 const appReducer = persistCombineReducers(config,AllReducers);
 
-const  rootReducer : RootReducer = (state : any, action : UserNameAction) => {
+const  rootReducer : RootReducer = (state : Object, action : UserNameAction) => {
     return appReducer(state, action);
 };
 
