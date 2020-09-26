@@ -1,16 +1,26 @@
+//@flow
 /**
  * Create By @name Sukumar_Abhijeet 
  */
 
-import React,{useState,useRef} from 'react';
-import { SafeAreaView,View,TextInput,Text,TouchableOpacity,ScrollView, Keyboard } from 'react-native';
-import PropTypes from 'prop-types';
+import React,{useState,useRef,type AbstractComponent} from 'react';
+import { SafeAreaView,View,TextInput,ScrollView, Keyboard, StatusBar } from 'react-native';
 import styles from './styles';
 import * as userActions from '../../../@Redux/actions/userActions';
 import { connect } from 'react-redux';
 import Toast from 'react-native-simple-toast';
+import DefaultButton from '../../../@GlobalComponents/Buttons';
+import COLORS from '../../../@Constants/Colors';
 
-const LoginScreen = ({...props}) =>{
+const {white}  = COLORS;
+
+type Props = {
+    navigation:Object,
+    updateUserName:Function,
+}
+
+
+const LoginScreen = ({...props}:Props) =>{
 
     const myName = useRef();
 
@@ -24,70 +34,48 @@ const LoginScreen = ({...props}) =>{
     const updateData = () =>{
         Keyboard.dismiss();
         if(name !== '')
-            {
-                updateUserName(name);
-                myName.current.clear();
-                setName('');
-                Toast.show('Your name is updated');
-            }
+        {
+            updateUserName(name);
+            myName.current.clear();
+            setName('');
+            Toast.show('Your name is updated');
+        }
             
         else
             Toast.show('Empty UserName');
     };
 
     const renderNameBox = () =>(
-            <View style={styles.inputWrapper}>
+        <View style={styles.inputWrapper}>
             <TextInput
                 autoFocus={true}
                 blurOnSubmit={false}
                 onChangeText={res => {
                     setName(res);
                 }}
-                ref={myName}
                 onSubmitEditing={() => updateData()}
-                placeholder="Please enter your Name " 
-                placeholderTextColor={'#6e6d6d'}
+                placeholder="Please enter your Name "
+                placeholderTextColor={'#6e6d6d'} 
+                ref={myName}
                 returnKeyType={'done'}
                 style={styles.inputField}
             />
-            <TouchableOpacity 
-                onPress={()=>updateData()} 
-                disabled={name===''} 
-                style={{...styles.saveButton,opacity:name === '' ? .4:1}}
-            >
-                <Text style={{color:'#fff'}}>Save</Text>
-            </TouchableOpacity>
-            </View>
-        );
+            <DefaultButton buttonStyle={styles.saveButton}  buttonText={'Save'} disabled={name===''} onPress={()=>updateData()} />
+        </View>
+    );
 
     return(
         <SafeAreaView style={styles.mainContainer}>
+            <StatusBar backgroundColor={white} barStyle={'dark-content'} />
             <ScrollView contentContainerStyle={styles.scrollContainer}>
                 <View style={styles.card}>
                     {renderNameBox()}
                 </View>
-                <View style={{flexDirection:'row'}}>
-                <TouchableOpacity 
-                    onPress={()=>navigate('Buttons')}
-                    style={styles.customButtons}
-                >
-                    <Text style={styles.btnText}>Visit Buttons</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                 onPress={()=>navigate('Native')}
-                    style={styles.customButtons}
-                >
-                    <Text style={styles.btnText}>Check Device</Text>
-                </TouchableOpacity>
-                </View>
+                <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} />
+                <DefaultButton buttonText={'Check Devices'} onPress={()=>navigate('Native')} />
             </ScrollView>
         </SafeAreaView>
     );
-};
-
-LoginScreen.propTypes = {
-    navigation:PropTypes.object.isRequired,
-    updateUserName:PropTypes.func.isRequired,
 };
 
 const mapStateToProps =() =>{
@@ -100,4 +88,4 @@ const  mapDispatchToProp =(dispatch)=>({
 });
 
 
-export default connect(mapStateToProps,mapDispatchToProp)(LoginScreen);
+export default (connect(mapStateToProps,mapDispatchToProp)(LoginScreen):AbstractComponent<any>);

@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Button Screen .js 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#1a1924",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "color": "#fff",
+        "fontSize": 22,
+        "fontWeight": "bold",
+        "margin": 31.428571428571427,
+      }
+    }
+  >
+    Welcome - 
+  </Text>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "bottom": 0,
+        "position": "absolute",
+        "width": "90%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#1a1924",
+          "borderRadius": 15.714285714285714,
+          "marginBottom": 15.714285714285714,
+          "opacity": 1,
+          "paddingVertical": 23.57142857142857,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6eb1f7",
+            "fontSize": 22,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Press me
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#34424b",
+          "borderRadius": 15.714285714285714,
+          "marginBottom": 15.714285714285714,
+          "opacity": 1,
+          "paddingVertical": 23.57142857142857,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6eb1f7",
+            "fontSize": 22,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Press me
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#6eb1f7",
+          "borderRadius": 15.714285714285714,
+          "marginBottom": 15.714285714285714,
+          "opacity": 1,
+          "paddingVertical": 23.57142857142857,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 22,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Press me
+      </Text>
+    </View>
+    <SwipeButton
+      containerStyles={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#1a1924",
+          "borderRadius": 15.714285714285714,
+          "marginBottom": 23.57142857142857,
+          "width": "100%",
+        }
+      }
+      onSwipeSuccess={[Function]}
+      railBackgroundColor="#1a1924"
+      railBorderColor="#34424b"
+      railFillBackgroundColor="#6eb1f7"
+      railFillBorderColor="#6eb1f7"
+      shouldResetAfterSuccess={true}
+      thumbIconBackgroundColor="#6eb1f7"
+      thumbIconBorderColor="#6eb1f7"
+      thumbIconComponent={[Function]}
+      thumbIconStyles={
+        Object {
+          "borderRadius": 12.571428571428571,
+        }
+      }
+      title="Slide me to Continue"
+      titleColor="#6eb1f7"
+      titleStyles={
+        Object {
+          "fontSize": 18.857142857142858,
+        }
+      }
+    />
+  </View>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    onBackButtonPress={[Function]}
+    onRequestClose={[Function]}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "bottom": 0,
+          "height": 314.2857142857143,
+          "position": "absolute",
+          "width": 750,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "flex-end",
+            "backgroundColor": "red",
+            "borderRadius": 15.714285714285714,
+            "margin": 15.714285714285714,
+            "marginBottom": 15.714285714285714,
+            "opacity": 1,
+            "padding": 23.57142857142857,
+            "paddingVertical": 12.571428571428571,
+            "width": 157.14285714285714,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 22,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          Close
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginTop": 15.714285714285714,
+            "paddingHorizontal": 15.714285714285714,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#6eb1f7",
+              "borderRadius": 15.714285714285714,
+              "marginBottom": 15.714285714285714,
+              "opacity": 1,
+              "paddingVertical": 15.714285714285714,
+              "width": 235.71428571428572,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 22,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            Visit Login
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#6eb1f7",
+              "borderRadius": 15.714285714285714,
+              "marginBottom": 15.714285714285714,
+              "opacity": 1,
+              "paddingVertical": 15.714285714285714,
+              "width": 235.71428571428572,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 22,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            Check Device
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "red",
+            "borderRadius": 15.714285714285714,
+            "margin": 15.714285714285714,
+            "marginBottom": 15.714285714285714,
+            "opacity": 1,
+            "padding": 23.57142857142857,
+            "paddingVertical": 12.571428571428571,
+            "width": 235.71428571428572,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 22,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          Terminate Session
+        </Text>
+      </View>
+    </View>
+  </Modal>
+</RCTSafeAreaView>
+`;

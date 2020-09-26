@@ -1,3 +1,4 @@
+//@flow
 /**
  * Create By @name Sukumar_Abhijeet
  */
@@ -5,7 +6,7 @@
 import {StyleSheet} from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 
-const styles = StyleSheet.create({
+const styles:Object = StyleSheet.create({
     mainContainer: {
         flex: 1,
     },
@@ -13,7 +14,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         justifyContent:'center',
         alignItems:'center',
-        flex:1
+        flex:1,
+        padding:moderateScale(10)
     },
     card:{
         width:'90%',
@@ -51,9 +53,8 @@ const styles = StyleSheet.create({
         justifyContent:'space-between'
     },
     saveButton:{
-        backgroundColor:'#0751f0',
-        padding:moderateScale(10),
-        borderRadius:moderateScale(6)
+        width:moderateScale(50),
+        paddingVertical:moderateScale(10)
     }
 });
 

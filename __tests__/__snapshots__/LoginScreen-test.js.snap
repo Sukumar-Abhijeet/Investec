@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Button Screen .js 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 15.714285714285714,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 6.285714285714286,
+            "elevation": 5,
+            "marginVertical": 31.428571428571427,
+            "padding": 23.57142857142857,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 2,
+            "width": "90%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            autoFocus={true}
+            blurOnSubmit={false}
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            placeholder="Please enter your Name "
+            placeholderTextColor="#6e6d6d"
+            rejectResponderTermination={true}
+            returnKeyType="done"
+            style={
+              Object {
+                "borderBottomColor": "#cfcfcf",
+                "borderBottomWidth": 1,
+                "height": 70.71428571428572,
+                "width": "80%",
+              }
+            }
+            underlineColorAndroid="transparent"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#6eb1f7",
+                "borderRadius": 15.714285714285714,
+                "marginBottom": 15.714285714285714,
+                "opacity": 0.4,
+                "paddingVertical": 15.714285714285714,
+                "width": 78.57142857142857,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 22,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Save
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#6eb1f7",
+            "borderRadius": 15.714285714285714,
+            "marginBottom": 15.714285714285714,
+            "opacity": 1,
+            "paddingVertical": 23.57142857142857,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 22,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          Visit Buttons
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#6eb1f7",
+            "borderRadius": 15.714285714285714,
+            "marginBottom": 15.714285714285714,
+            "opacity": 1,
+            "paddingVertical": 23.57142857142857,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 22,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          Check Devices
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

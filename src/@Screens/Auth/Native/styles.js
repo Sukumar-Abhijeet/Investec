@@ -1,36 +1,32 @@
+//@flow
 /**
  * Create By @name Sukumar_Abhijeet
  */
 
 import {StyleSheet} from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
+import COLORS from '../../../@Constants/Colors';
 
-const styles = StyleSheet.create({
+const {black,white}  = COLORS;
+
+const styles : Object = StyleSheet.create({
     mainContainer: {
         flex: 1,
+        padding:moderateScale(10),
+        backgroundColor:white
     },
     userName:{
-        color:'#000',
+        color:black,
         alignSelf:'flex-end',
         margin:moderateScale(20),
         fontSize:moderateScale(14),
         fontWeight:'bold'
     },
-    customButtons:{
-        alignSelf:'center',
-        backgroundColor:'#0751f0',
-        paddingHorizontal:moderateScale(25),
-        padding:moderateScale(8),
-        borderRadius:moderateScale(4),
-        marginBottom:moderateScale(10),
-        marginRight:moderateScale(10)
-    },
-    btnText:{
-        color:'#fff'
-    },
     buttonWrapper:{
-        flexDirection:'row',alignSelf:'center',
-        position:'absolute',bottom:moderateScale(50)
+        alignSelf:'center',
+        position:'absolute',
+        bottom:moderateScale(50),
+        width:'100%'
     },
     noticeView:{
         backgroundColor:'#000',
@@ -40,7 +36,7 @@ const styles = StyleSheet.create({
         paddingVertical:moderateScale(10),
     },
     noticeText:{
-        color:'#fff',
+        color:white,
         fontWeight:'bold',
         textAlign:'center'
     }

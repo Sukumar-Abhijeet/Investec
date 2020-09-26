@@ -1,25 +1,36 @@
+//@flow
 /**
  * Create By @name Sukumar_Abhijeet 
  */
 
-import React, { useEffect, useState } from 'react';
-import { SafeAreaView,Text,View,TouchableOpacity,NativeModules, Platform } from 'react-native';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState ,type AbstractComponent } from 'react';
+import { SafeAreaView,Text,View,NativeModules, Platform, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import styles from './styles';
+import DefaultButton from '../../../@GlobalComponents/Buttons';
+import COLORS from '../../../@Constants/Colors';
+
+const {white} = COLORS;
 
 const {NativeDeviceModule,NativeDevice} = NativeModules;
 const NativeDeviceAndroid =NativeDeviceModule;
 const NativeDeviceIOS =NativeDevice;
 
-const NativeScreen = ({...props}) =>{
+type Props = {
+    navigation:Object,
+    userName:string,
+    updateUserName:Function,
+}
+
+
+const NativeScreen = ({...props} : Props) =>{
 
     const {userName,navigation:{navigate}} = props;
     const [isNotDevice , setIsNotDevice] = useState(false);
 
     useEffect(()=>{
         checkDevice();
-    },[])
+    },[]);
 
     // CHECK SIMULATOR/EMULATOR FROM NATIVE MODULES
     const checkDevice = async() =>{
@@ -29,7 +40,7 @@ const NativeScreen = ({...props}) =>{
         else
             isEmulator = await NativeDeviceAndroid.isEmulator();
         setIsNotDevice(isEmulator);
-    }
+    };
     
     const showNotice = () =>{
         if(isNotDevice)
@@ -37,45 +48,32 @@ const NativeScreen = ({...props}) =>{
                 <View style={styles.noticeView}>
                     <Text style={styles.noticeText}> You are Running on {Platform.OS === 'ios' ? 'Simulator' : 'Emulator'}</Text>
                 </View>
-            )
+            );
         return null;
-    }
+    };
+
     const renderName=()=>{
         if(userName!=='')
             return <Text style={styles.userName}>Welcome - {userName}</Text>;
         return null;
-    }
+    };
 
     return(
         <SafeAreaView style={styles.mainContainer}>
+            <StatusBar backgroundColor={white} barStyle={'dark-content'} />
             {renderName()}{showNotice()}
             <View style={styles.buttonWrapper}>
-                <TouchableOpacity 
-                    onPress={()=>navigate('Buttons')}
-                    style={styles.customButtons}
-                >
-                    <Text style={styles.btnText}>Visit Buttons</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                 onPress={()=>navigate('Login')}
-                    style={styles.customButtons}
-                >
-                    <Text style={styles.btnText}>Check Login</Text>
-                </TouchableOpacity>
-                </View>
+                <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} />
+                <DefaultButton buttonText={'Check Login'} onPress={()=>navigate('Login')} />
+            </View>
         </SafeAreaView>
     );
 };
 
-NativeScreen.propTypes = {
-    userName:PropTypes.string.isRequired,
-    navigation:PropTypes.object.isRequired,
-};
-
-const mapStateToProps =(state) =>{
+const mapStateToProps =(state : Object) : Object =>{
     return {
         userName: state.userData.userName
     };
 };
 
-export default connect(mapStateToProps)(NativeScreen);
+export default (connect(mapStateToProps)(NativeScreen):AbstractComponent<any>);

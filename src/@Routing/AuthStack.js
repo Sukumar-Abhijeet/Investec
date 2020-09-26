@@ -1,3 +1,4 @@
+//@flow
 /**
  * Create By @name Sukumar_Abhijeet 
  */
@@ -36,6 +37,6 @@ const MainAppStack = createStackNavigator(
     }
 );
 
-const AuthStack = createAppContainer(MainAppStack);
+const AuthStack : Function = createAppContainer(MainAppStack);
 export default AuthStack;
 
