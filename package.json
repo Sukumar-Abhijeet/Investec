@@ -29,6 +29,8 @@
     "@babel/runtime": "^7.11.2",
     "@react-native-community/eslint-config": "^2.0.0",
     "@react-native-community/masked-view": "^0.1.10",
+    "@testing-library/jest-native": "^3.4.2",
+    "@testing-library/react-native": "^7.0.2",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^26.3.0",
     "eslint": "^7.9.0",
@@ -47,6 +49,9 @@
   },
   "jest": {
     "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "./node_modules/@testing-library/jest-native/extend-expect"
+    ],
     "setupFiles": [
       "<rootDir>/node_modules/react-native-gesture-handler/jestSetup.js",
       "<rootDir>/__setup__/externals.js"

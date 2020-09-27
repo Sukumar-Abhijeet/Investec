@@ -12,11 +12,11 @@ const {primary,white} =COLORS;
 
 
 const DefaultButton = (
-    {buttonStyle,disabled,buttonText,textStyle,onPress}:
-    {buttonStyle?:Object,disabled?:boolean,buttonText:string,textStyle?:Object,onPress:Function}
+    {buttonStyle,disabled,buttonText,textStyle,onPress,testId}:
+    {buttonStyle?:Object,disabled?:boolean,buttonText:string,textStyle?:Object,onPress:Function,testId:string}
 ) : Object => {
     return(
-        <Pressable disabled={disabled} onPress={onPress} style={{opacity:disabled ? .4:1,...styles.defaultStyle,...buttonStyle}}>
+        <Pressable disabled={disabled} onPress={onPress} style={{opacity:disabled ? .4:1,...styles.defaultStyle,...buttonStyle}} testID={testId}>
             <Text style={{...styles.defaultTextStyle,...textStyle}}>{buttonText}</Text>
         </Pressable>
     );

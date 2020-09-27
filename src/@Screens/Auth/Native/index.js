@@ -60,8 +60,8 @@ const NativeScreen = ({...props} : Props) =>{
             }
             {showNotice()}
             <View style={styles.buttonWrapper}>
-                <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} />
-                <DefaultButton buttonText={'Check Login'} onPress={()=>navigate('Login')} />
+                <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} testId={'NavigateToButtons'} />
+                <DefaultButton buttonText={'Check Login'} onPress={()=>navigate('Login')} testId={'NavigateToLogin'} />
             </View>
         </SafeAreaView>
     );

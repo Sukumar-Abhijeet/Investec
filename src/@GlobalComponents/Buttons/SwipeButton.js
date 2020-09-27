@@ -12,8 +12,8 @@ import COLORS from '../../@Constants/Colors';
 const {secondary,primary,darkGrey} = COLORS;
 
 const DefaultSwipeButton = (
-    {onPress,boxContainerStyle,thumbContainerStyle,IconComponent} : 
-    {onPress:Function,boxContainerStyle?:Object,thumbContainerStyle?:Object,IconComponent:Function}
+    {onPress,boxContainerStyle,thumbContainerStyle,IconComponent,testId} : 
+    {onPress:Function,boxContainerStyle?:Object,thumbContainerStyle?:Object,IconComponent:Function,testId:string}
 ) : Object =>{
     return(
         <SwipeButton 
@@ -26,6 +26,7 @@ const DefaultSwipeButton = (
             railFillBackgroundColor={primary}
             railFillBorderColor={primary}
             shouldResetAfterSuccess={true}
+            testID={testId}
             thumbIconBackgroundColor={primary}
             thumbIconBorderColor={primary}
             thumbIconComponent={IconComponent}

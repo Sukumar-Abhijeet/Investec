@@ -41,16 +41,17 @@ const ButtonScreen = ({...props}:Props) =>{
                 onRequestClose={() => {
                     setShowModal(false);
                 }}
+                testID={'ModalInterface'}
                 transparent={true}
                 visible={showModal}
             >
                 <View style={styles.centeredView}>
-                    <DefaultButton  buttonStyle={styles.closeButton}  buttonText={'Close'} onPress={()=>setShowModal(false)} />
+                    <DefaultButton  buttonStyle={styles.closeButton}  buttonText={'Close'} onPress={()=>setShowModal(false)} testId={'Close'} />
                     <View style={styles.viewWrapper}>
-                        <DefaultButton  buttonStyle={styles.customButtons}  buttonText={'Visit Login'} onPress={()=>{setShowModal(false),navigate('Login');}} />
-                        <DefaultButton  buttonStyle={styles.customButtons}  buttonText={'Check Device'} onPress={()=>{setShowModal(false),navigate('Native');}} />
+                        <DefaultButton buttonStyle={styles.customButtons}  buttonText={'Visit Login'}  onPress={()=>{setShowModal(false),navigate('Login');}} testId={'NavigateToLogin'} />
+                        <DefaultButton buttonStyle={styles.customButtons}  buttonText={'Check Device'}  onPress={()=>{setShowModal(false),navigate('Native');}} testId={'NavigateToNative'} />
                     </View>
-                    <DefaultButton  buttonStyle={styles.terminateButton}  buttonText={'Terminate Session'} onPress={()=>{terminateSession();}} />
+                    <DefaultButton  buttonStyle={styles.terminateButton}  buttonText={'Terminate Session'} onPress={()=>{terminateSession();}} testId={'TerminateSession'}  />
                 </View>
             </Modal>
         );
@@ -63,10 +64,10 @@ const ButtonScreen = ({...props}:Props) =>{
                 (userName!=='') && <Text style={styles.userName}>Welcome - {userName}</Text>
             }
             <View style={styles.buttonContainer}>
-                <DefaultButton buttonStyle={{backgroundColor:secondary}} buttonText={'Press me'} onPress={()=>setShowModal(true)} textStyle={{color:primaryText}} />
-                <DefaultButton buttonStyle={{backgroundColor:darkGrey}} buttonText={'Press me'} onPress={()=>setShowModal(true)} textStyle={{color:primaryText}} />
-                <DefaultButton buttonText={'Press me'} onPress={()=>setShowModal(true)} />
-                <DefaultSwipeButton IconComponent={DiamondImage} onPress={()=>setShowModal(true)} />
+                <DefaultButton buttonStyle={{backgroundColor:secondary}} buttonText={'Press me1'} onPress={()=>setShowModal(true)} testId={'Pressme1'} textStyle={{color:primaryText}} />
+                <DefaultButton buttonStyle={{backgroundColor:darkGrey}} buttonText={'Press me2'} onPress={()=>setShowModal(true)} testId={'Pressme2'} textStyle={{color:primaryText}} />
+                <DefaultButton buttonText={'Press me3'} onPress={()=>setShowModal(true)} testId={'Pressme3'} />
+                <DefaultSwipeButton IconComponent={DiamondImage} onPress={()=>setShowModal(true)} testId={'Swipebutton'} />
             </View>
             {renderModal()}
         </SafeAreaView>

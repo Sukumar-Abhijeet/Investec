@@ -35,7 +35,8 @@ const LoginScreen = ({...props}:Props) =>{
         {
             updateUserName(name);
             setName('');
-            Toast.show('Your name is updated');
+            //Comment The Toast while event testing
+            // Toast.show('Your name is updated');
         }
             
         else
@@ -55,9 +56,10 @@ const LoginScreen = ({...props}:Props) =>{
                 placeholderTextColor={'#6e6d6d'} 
                 returnKeyType={'done'}
                 style={styles.inputField}
+                testID={'TextInput'}
                 value={name}
             />
-            <DefaultButton buttonStyle={styles.saveButton}  buttonText={'Save'} disabled={name===''} onPress={()=>updateData()} />
+            <DefaultButton buttonStyle={styles.saveButton} buttonText={'Save'} disabled={name===''}  onPress={()=>updateData()} testId={'SaveButton'} title={'Save'} />
         </View>
     );
 
@@ -68,8 +70,8 @@ const LoginScreen = ({...props}:Props) =>{
                 <View style={styles.card}>
                     {renderNameBox()}
                 </View>
-                <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} />
-                <DefaultButton buttonText={'Check Devices'} onPress={()=>navigate('Native')} />
+                <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} testId={'NavigateToButtons'} />
+                <DefaultButton buttonText={'Check Devices'} onPress={()=>navigate('Native')} testId={'NavigateToNative'} />
             </ScrollView>
         </SafeAreaView>
     );
