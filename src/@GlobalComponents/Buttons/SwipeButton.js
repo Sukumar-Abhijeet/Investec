@@ -13,7 +13,7 @@ const {secondary,primary,darkGrey} = COLORS;
 
 const DefaultSwipeButton = (
     {onPress,boxContainerStyle,thumbContainerStyle,IconComponent} : 
-    {onPress:Function,boxContainerStyle?:Object,thumbContainerStyle?:Object,IconComponent:Object}
+    {onPress:Function,boxContainerStyle?:Object,thumbContainerStyle?:Object,IconComponent:Function}
 ) : Object =>{
     return(
         <SwipeButton 

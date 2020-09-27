@@ -68,6 +68,7 @@ exports[`Testing Button Screen .js 1`] = `
               }
             }
             underlineColorAndroid="transparent"
+            value=""
           />
           <View
             accessible={true}

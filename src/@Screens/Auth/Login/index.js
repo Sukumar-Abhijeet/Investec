@@ -3,7 +3,7 @@
  * Create By @name Sukumar_Abhijeet 
  */
 
-import React,{useState,useRef,type AbstractComponent} from 'react';
+import React,{useState,type AbstractComponent} from 'react';
 import { SafeAreaView,View,TextInput,ScrollView, Keyboard, StatusBar } from 'react-native';
 import styles from './styles';
 import * as userActions from '../../../@Redux/actions/userActions';
@@ -22,8 +22,6 @@ type Props = {
 
 const LoginScreen = ({...props}:Props) =>{
 
-    const myName = useRef();
-
     const {
         navigation:{navigate},
         updateUserName
@@ -36,7 +34,6 @@ const LoginScreen = ({...props}:Props) =>{
         if(name !== '')
         {
             updateUserName(name);
-            myName.current.clear();
             setName('');
             Toast.show('Your name is updated');
         }
@@ -56,9 +53,9 @@ const LoginScreen = ({...props}:Props) =>{
                 onSubmitEditing={() => updateData()}
                 placeholder="Please enter your Name "
                 placeholderTextColor={'#6e6d6d'} 
-                ref={myName}
                 returnKeyType={'done'}
                 style={styles.inputField}
+                value={name}
             />
             <DefaultButton buttonStyle={styles.saveButton}  buttonText={'Save'} disabled={name===''} onPress={()=>updateData()} />
         </View>
