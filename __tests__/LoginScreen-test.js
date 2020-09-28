@@ -1,6 +1,7 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { render, fireEvent } from '@testing-library/react-native';
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 
@@ -37,4 +38,38 @@ test('Testing Button Screen .js', () => {
       </Provider>
   ).toJSON();
   expect(snap).toMatchSnapshot();
+});
+
+/**
+ @note Remove the Toast from the code during test
+ @reason  jest couldnot mock native libraries while doing @name Event_Testing
+ */
+
+test('Testing Events in Login Screen',async ()=>{
+    const {debug,getByTestId,queryByText} = render(
+    <Provider store={store}>
+        <LoginScreen  {...createTestProps} />
+      </Provider>
+    );
+
+    // Test For TextInput and Save Button
+    const textInput = getByTestId('TextInput');
+    const saveButton = getByTestId('SaveButton');
+    fireEvent.changeText(textInput, 'Sukumar Abhijeet');
+    fireEvent.press(saveButton);
+    expect(saveButton).toBeDisabled();
+
+    // Test For Buttons Screen 
+    const navigateToButtons = getByTestId('NavigateToButtons');
+    fireEvent.press(navigateToButtons);
+    const welcomeKey = await queryByText('Sukumar Abhijeet');
+    expect(welcomeKey).toBeDefined();
+
+    // Test For Device Screen Button
+    const navigateToNative = getByTestId('NavigateToNative');
+    fireEvent.press(navigateToNative);
+    const welcomeKeyNative = await queryByText('Sukumar Abhijeet');
+    expect(welcomeKeyNative).toBeDefined();
+
+    debug();
 });

@@ -1,6 +1,7 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { render, fireEvent } from '@testing-library/react-native';
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 
@@ -37,4 +38,20 @@ test('Testing Button Screen .js', () => {
       </Provider>
   ).toJSON();
   expect(snap).toMatchSnapshot();
+});
+
+test('Testing Events in Button Screen',()=>{
+    const {debug,getByTestId,queryByText} = render(
+    <Provider store={store}>
+        <NativeScreen  {...createTestProps} />
+      </Provider>
+    );
+
+    // Test For Buttons Screen 
+    const NavigateToLogin = getByTestId('NavigateToLogin');
+    fireEvent.press(NavigateToLogin);
+    const saveText = queryByText('Save');
+    expect(saveText).toBeDefined();
+
+    debug();
 });

@@ -67,6 +67,7 @@ exports[`Testing Button Screen .js 1`] = `
                 "width": "80%",
               }
             }
+            testID="TextInput"
             underlineColorAndroid="transparent"
             value=""
           />
@@ -92,6 +93,7 @@ exports[`Testing Button Screen .js 1`] = `
                 "width": 78.57142857142857,
               }
             }
+            testID="SaveButton"
           >
             <Text
               style={
@@ -130,6 +132,7 @@ exports[`Testing Button Screen .js 1`] = `
             "width": "100%",
           }
         }
+        testID="NavigateToButtons"
       >
         <Text
           style={
@@ -166,6 +169,7 @@ exports[`Testing Button Screen .js 1`] = `
             "width": "100%",
           }
         }
+        testID="NavigateToNative"
       >
         <Text
           style={

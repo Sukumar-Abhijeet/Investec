@@ -56,6 +56,7 @@ exports[`Testing Button Screen .js 1`] = `
           "width": "100%",
         }
       }
+      testID="Pressme1"
     >
       <Text
         style={
@@ -67,7 +68,7 @@ exports[`Testing Button Screen .js 1`] = `
           }
         }
       >
-        Press me
+        Press me1
       </Text>
     </View>
     <View
@@ -92,6 +93,7 @@ exports[`Testing Button Screen .js 1`] = `
           "width": "100%",
         }
       }
+      testID="Pressme2"
     >
       <Text
         style={
@@ -103,7 +105,7 @@ exports[`Testing Button Screen .js 1`] = `
           }
         }
       >
-        Press me
+        Press me2
       </Text>
     </View>
     <View
@@ -128,6 +130,7 @@ exports[`Testing Button Screen .js 1`] = `
           "width": "100%",
         }
       }
+      testID="Pressme3"
     >
       <Text
         style={
@@ -139,7 +142,7 @@ exports[`Testing Button Screen .js 1`] = `
           }
         }
       >
-        Press me
+        Press me3
       </Text>
     </View>
     <SwipeButton
@@ -158,6 +161,7 @@ exports[`Testing Button Screen .js 1`] = `
       railFillBackgroundColor="#6eb1f7"
       railFillBorderColor="#6eb1f7"
       shouldResetAfterSuccess={true}
+      testID="Swipebutton"
       thumbIconBackgroundColor="#6eb1f7"
       thumbIconBorderColor="#6eb1f7"
       thumbIconComponent={[Function]}
@@ -179,6 +183,7 @@ exports[`Testing Button Screen .js 1`] = `
     animationType="slide"
     hardwareAccelerated={false}
     onRequestClose={[Function]}
+    testID="ModalInterface"
     transparent={true}
     visible={false}
   >
@@ -219,6 +224,7 @@ exports[`Testing Button Screen .js 1`] = `
             "width": 157.14285714285714,
           }
         }
+        testID="Close"
       >
         <Text
           style={
@@ -266,6 +272,7 @@ exports[`Testing Button Screen .js 1`] = `
               "width": 235.71428571428572,
             }
           }
+          testID="NavigateToLogin"
         >
           <Text
             style={
@@ -302,6 +309,7 @@ exports[`Testing Button Screen .js 1`] = `
               "width": 235.71428571428572,
             }
           }
+          testID="NavigateToNative"
         >
           <Text
             style={
@@ -342,6 +350,7 @@ exports[`Testing Button Screen .js 1`] = `
             "width": 235.71428571428572,
           }
         }
+        testID="TerminateSession"
       >
         <Text
           style={

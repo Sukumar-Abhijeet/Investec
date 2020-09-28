@@ -57,6 +57,7 @@ exports[`Testing Button Screen .js 1`] = `
           "width": "100%",
         }
       }
+      testID="NavigateToButtons"
     >
       <Text
         style={
@@ -93,6 +94,7 @@ exports[`Testing Button Screen .js 1`] = `
           "width": "100%",
         }
       }
+      testID="NavigateToLogin"
     >
       <Text
         style={
