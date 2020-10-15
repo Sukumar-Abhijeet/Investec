@@ -30,7 +30,7 @@ const obj2 = {name:'Investec',age:100};
 const arr1 = [1,2,3,4,5];
 const arr2 = ['N1','N2','N3','N4','N5'];
 
-const param1 =500;
+const param1 = 500;
 const param2 = 300;
 
 const UtilityScreen = ({...props} : Props) =>{
