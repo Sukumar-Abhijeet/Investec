@@ -3,7 +3,13 @@
  * Create By @name Sukumar_Abhijeet,
  */
 
-export const mergeTwoObjects = ( obj1:Object, obj2:Object ) : ?Object => {
+ type ObjType1 = {| test: string ,value :number|};
+
+ type ObjType2 = {| name: string ,age :number|};
+ 
+ type ReturnedObjectType = {| ...ObjType1, ...ObjType2 |};
+
+export const mergeTwoObjects = ( obj1:ObjType, obj2:ObjType2 ) : ?ReturnedObjectType => {
     if(typeof obj1 === 'object' && typeof obj2 === 'object')
         return {...obj1,...obj2};
 };

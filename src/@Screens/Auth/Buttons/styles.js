@@ -63,7 +63,7 @@ const styles : Object = StyleSheet.create({
         paddingVertical:moderateScale(8),
     },
     customButtons:{
-        width:moderateScale(150),
+        width:moderateScale(100),
         paddingVertical:moderateScale(10)
     },
     btnText:{

@@ -50,6 +50,7 @@ const ButtonScreen = ({...props}:Props) =>{
                     <View style={styles.viewWrapper}>
                         <DefaultButton buttonStyle={styles.customButtons}  buttonText={'Visit Login'}  onPress={()=>{setShowModal(false),navigate('Login');}} testId={'NavigateToLogin'} />
                         <DefaultButton buttonStyle={styles.customButtons}  buttonText={'Check Device'}  onPress={()=>{setShowModal(false),navigate('Native');}} testId={'NavigateToNative'} />
+                        <DefaultButton buttonStyle={styles.customButtons}  buttonText={'Check Utility'}  onPress={()=>{setShowModal(false),navigate('Utility');}} testId={'NavigateToUtility'} />
                     </View>
                     <DefaultButton  buttonStyle={styles.terminateButton}  buttonText={'Terminate Session'} onPress={()=>{terminateSession();}} testId={'TerminateSession'}  />
                 </View>

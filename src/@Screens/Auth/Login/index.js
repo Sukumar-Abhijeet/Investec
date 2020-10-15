@@ -72,6 +72,7 @@ const LoginScreen = ({...props}:Props) =>{
                 </View>
                 <DefaultButton buttonText={'Visit Buttons'} onPress={()=>navigate('Buttons')} testId={'NavigateToButtons'} />
                 <DefaultButton buttonText={'Check Devices'} onPress={()=>navigate('Native')} testId={'NavigateToNative'} />
+                <DefaultButton buttonText={'Check Utilities'} onPress={()=>navigate('Utility')} testId={'NavigateToUtility'} />
             </ScrollView>
         </SafeAreaView>
     );

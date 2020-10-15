@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import reduxStore from './src/@Redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import {persistStore} from 'redux-persist';
-import SwitchNavigator from './src/@Routing';
+import AuthNavigator from './src/@Routing';
 import ScreenLoader from './src/@GlobalComponents/ScreenLoader';
 
 export const reduxPersistStore : Object = persistStore(reduxStore); 
@@ -23,7 +23,7 @@ const App : StatelessFunctionalComponent<Node> = () => {
     return (
         <Provider store={reduxStore}>
             <PersistGate loading={renderLoader()} persistor={reduxPersistStore}>
-                <SwitchNavigator />
+                <AuthNavigator />
             </PersistGate>
         </Provider>
     );

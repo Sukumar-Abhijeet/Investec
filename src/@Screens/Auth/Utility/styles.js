@@ -15,6 +15,15 @@ const styles : Object = StyleSheet.create({
         padding:moderateScale(10),
         backgroundColor:white
     },
+    buttonWrapper:{
+        alignSelf:'center',
+        position:'absolute',
+        bottom:moderateScale(50),
+        width:'90%',
+    },
+    upperContainer:{
+        paddingHorizontal:moderateScale(20)
+    },
     userName:{
         color:black,
         alignSelf:'flex-end',
@@ -22,23 +31,9 @@ const styles : Object = StyleSheet.create({
         fontSize:moderateScale(14),
         fontWeight:'bold'
     },
-    buttonWrapper:{
-        alignSelf:'center',
-        position:'absolute',
-        bottom:moderateScale(50),
-        width:'90%',
-    },
-    noticeView:{
-        backgroundColor:'#000',
-        width:'90%',
-        alignSelf:'center',
-        borderRadius:moderateScale(5),
-        paddingVertical:moderateScale(10),
-    },
-    noticeText:{
-        color:white,
-        fontWeight:'bold',
-        textAlign:'center'
+    text:{
+        marginTop:moderateScale(10),
+        fontSize:moderateScale(16)
     }
 });
 
