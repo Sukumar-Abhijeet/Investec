@@ -269,7 +269,7 @@ exports[`Testing Button Screen .js 1`] = `
               "marginBottom": 15.714285714285714,
               "opacity": 1,
               "paddingVertical": 15.714285714285714,
-              "width": 235.71428571428572,
+              "width": 157.14285714285714,
             }
           }
           testID="NavigateToLogin"
@@ -306,7 +306,7 @@ exports[`Testing Button Screen .js 1`] = `
               "marginBottom": 15.714285714285714,
               "opacity": 1,
               "paddingVertical": 15.714285714285714,
-              "width": 235.71428571428572,
+              "width": 157.14285714285714,
             }
           }
           testID="NavigateToNative"
@@ -322,6 +322,43 @@ exports[`Testing Button Screen .js 1`] = `
             }
           >
             Check Device
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#6eb1f7",
+              "borderRadius": 15.714285714285714,
+              "marginBottom": 15.714285714285714,
+              "opacity": 1,
+              "paddingVertical": 15.714285714285714,
+              "width": 157.14285714285714,
+            }
+          }
+          testID="NavigateToUtility"
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 22,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            Check Utility
           </Text>
         </View>
       </View>

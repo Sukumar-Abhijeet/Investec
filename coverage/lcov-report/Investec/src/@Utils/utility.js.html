@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Investec/src/@Redux/reducers/userReducer.js</title>
+    <title>Code coverage report for Investec/src/@Utils/utility.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../../prettify.css" />
-    <link rel="stylesheet" href="../../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">Investec/src/@Redux/reducers</a> userReducer.js</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">Investec/src/@Utils</a> utility.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">81.82% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>9/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>9/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">81.82% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>9/11</span>
             </div>
         
             
@@ -83,10 +83,7 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -97,54 +94,48 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//@flow
-&nbsp;
 /**
- * Create By @name Sukumar_Abhijeet 
+ * Create By @name Sukumar_Abhijeet,
  */
 &nbsp;
-import {
-    UPDATE_USER_NAME
-} from '../constants/user.constant';
+ type ObjType1 = {| test: string ,value :number|};
 &nbsp;
-import type {UserNameAction,State} from '../types/userTypes';
+ type ObjType2 = {| name: string ,age :number|};
 &nbsp;
-const initialState = {
-    userName:'',
+ type MergedObjectType = {| ...ObjType1, ...ObjType2 |};
+&nbsp;
+export const mergeTwoObjects = ( obj1:ObjType1, obj2:ObjType2 ) : ?MergedObjectType =&gt; {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(typeof obj1 === 'object' &amp;&amp; typeof obj2 === 'object')
+        return {...obj1,...obj2};
 };
 &nbsp;
-&nbsp;
-const  userReducer = (state  : State = initialState,action : UserNameAction): State=&gt;{
-    const {userName,type} = action;
-    switch(type){
-&nbsp;
-<span class="branch-0 cbranch-no" title="branch not covered" >    case UPDATE_USER_NAME:</span>
-<span class="cstat-no" title="statement not covered" >        return{...state,userName:userName};    </span>
-&nbsp;
-    default:
-        return state;
-    }
+export const mergeTwoArrays = ( arr1:Array&lt;mixed&gt;, arr2:Array&lt;mixed&gt; ) : ?Array&lt;mixed&gt;  =&gt;{
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(Array.isArray(arr1) &amp;&amp; Array.isArray(arr2))
+        return [...arr1,...arr2];
 };
 &nbsp;
-export default userReducer;</pre></td></tr></table></pre>
+export const concatNumberAndString = (param1:number|string,param2:number|string) : ? (number | string) =&gt;{
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(typeof param1 === 'number' &amp;&amp; typeof param2 === 'number')
+        return param1+param2;
+<span class="cstat-no" title="statement not covered" >    if((typeof param1 === 'string' || typeof param1 === 'number') &amp;&amp; (typeof param2 === 'string' || typeof param2 === 'number'))</span>
+<span class="cstat-no" title="statement not covered" >        return `${param1}+${param2}`;</span>
+};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
@@ -154,14 +145,14 @@ export default userReducer;</pre></td></tr></table></pre>
                 at Thu Oct 15 2020 20:21:48 GMT+0530 (India Standard Time)
             </div>
         </div>
-        <script src="../../../../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../../sorter.js"></script>
-        <script src="../../../../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     

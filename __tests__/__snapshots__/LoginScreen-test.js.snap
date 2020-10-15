@@ -184,6 +184,43 @@ exports[`Testing Button Screen .js 1`] = `
           Check Devices
         </Text>
       </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#6eb1f7",
+            "borderRadius": 15.714285714285714,
+            "marginBottom": 15.714285714285714,
+            "opacity": 1,
+            "paddingVertical": 23.57142857142857,
+            "width": "100%",
+          }
+        }
+        testID="NavigateToUtility"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 22,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          Check Utilities
+        </Text>
+      </View>
     </View>
   </RCTScrollView>
 </RCTSafeAreaView>

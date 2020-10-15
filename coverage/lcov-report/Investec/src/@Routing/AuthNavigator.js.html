@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Investec/src/@Screens/Auth/Native/styles.js</title>
+    <title>Code coverage report for Investec/src/@Routing/AuthNavigator.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../../../prettify.css" />
-    <link rel="stylesheet" href="../../../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.png" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">Investec/src/@Screens/Auth/Native</a> styles.js</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">Investec/src/@Routing</a> AuthNavigator.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -101,7 +101,12 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,12 +115,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,49 +157,54 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//@flow
 /**
- * Create By @name Sukumar_Abhijeet
+ * Create By @name Sukumar_Abhijeet 
  */
 &nbsp;
-import {StyleSheet} from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
-import COLORS from '../../../@Constants/Colors';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 &nbsp;
-const {black,white}  = COLORS;
+//SCREEN IMPORTS
+import ButtonScreen from '../@Screens/Auth/Buttons';
+import LoginScreen from '../@Screens/Auth/Login';
+import NativeScreen from '../@Screens/Auth/Native';
+import UtilityScreen from '../@Screens/Auth/Utility';
 &nbsp;
-const styles : Object = StyleSheet.create({
-    mainContainer: {
-        flex: 1,
-        padding:moderateScale(10),
-        backgroundColor:white
-    },
-    userName:{
-        color:black,
-        alignSelf:'flex-end',
-        margin:moderateScale(20),
-        fontSize:moderateScale(14),
-        fontWeight:'bold'
-    },
-    buttonWrapper:{
-        alignSelf:'center',
-        position:'absolute',
-        bottom:moderateScale(50),
-        width:'90%',
-    },
-    noticeView:{
-        backgroundColor:'#000',
-        width:'90%',
-        alignSelf:'center',
-        borderRadius:moderateScale(5),
-        paddingVertical:moderateScale(10),
-    },
-    noticeText:{
-        color:white,
-        fontWeight:'bold',
-        textAlign:'center'
-    }
-});
+const Stack = createStackNavigator();
+const navigationOptions = {headerShown: false};
 &nbsp;
-export default styles;</pre></td></tr></table></pre>
+const AuthNavigator = <span class="fstat-no" title="function not covered" >()</span> : Function =&gt; {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+        &lt;NavigationContainer&gt;
+            &lt;Stack.Navigator headerMode="none" initialRouteName={'Login'}&gt;
+                &lt;Stack.Screen
+                    component={ButtonScreen}
+                    name="Buttons"
+                    options={navigationOptions}
+                /&gt;
+                &lt;Stack.Screen
+                    component={LoginScreen}
+                    name="Login"
+                    options={navigationOptions}
+                /&gt;
+                &lt;Stack.Screen
+                    component={NativeScreen}
+                    name="Native"
+                    options={navigationOptions}
+                /&gt;
+                &lt;Stack.Screen
+                    component={UtilityScreen}
+                    name="Utility"
+                    options={navigationOptions}
+                /&gt;
+            &lt;/Stack.Navigator&gt;
+        &lt;/NavigationContainer&gt;
+    );
+};
+&nbsp;
+export default AuthNavigator;
+&nbsp;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
@@ -199,14 +214,14 @@ export default styles;</pre></td></tr></table></pre>
                 at Thu Oct 15 2020 20:21:48 GMT+0530 (India Standard Time)
             </div>
         </div>
-        <script src="../../../../../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../../../sorter.js"></script>
-        <script src="../../../../../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     

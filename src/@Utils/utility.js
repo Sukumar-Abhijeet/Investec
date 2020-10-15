@@ -7,9 +7,9 @@
 
  type ObjType2 = {| name: string ,age :number|};
 
- type ReturnedObjectType = {| ...ObjType1, ...ObjType2 |};
+ type MergedObjectType = {| ...ObjType1, ...ObjType2 |};
 
-export const mergeTwoObjects = ( obj1:ObjType1, obj2:ObjType2 ) : ?ReturnedObjectType => {
+export const mergeTwoObjects = ( obj1:ObjType1, obj2:ObjType2 ) : ?MergedObjectType => {
     if(typeof obj1 === 'object' && typeof obj2 === 'object')
         return {...obj1,...obj2};
 };

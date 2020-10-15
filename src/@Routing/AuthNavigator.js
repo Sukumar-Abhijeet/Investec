@@ -19,7 +19,7 @@ const navigationOptions = {headerShown: false};
 const AuthNavigator = () : Function => {
     return (
         <NavigationContainer>
-            <Stack.Navigator headerMode="none" initialRouteName={'Buttons'}>
+            <Stack.Navigator headerMode="none" initialRouteName={'Login'}>
                 <Stack.Screen
                     component={ButtonScreen}
                     name="Buttons"

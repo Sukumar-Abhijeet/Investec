@@ -5,7 +5,6 @@
 
 import React,{type AbstractComponent} from 'react';
 import { SafeAreaView,View,StatusBar,Text } from 'react-native';
-import PropTypes from 'prop-types';
 import COLORS from '../../../@Constants/Colors';
 import DefaultButton from '../../../@GlobalComponents/Buttons';
 import { connect } from 'react-redux';
@@ -99,9 +98,6 @@ const UtilityScreen = ({...props} : Props) =>{
     );
 };
 
-UtilityScreen.propTypes = {
-    navigation:PropTypes.object.isRequired,
-};
 
 const mapStateToProps =(state : Object) : Object =>{
     return {

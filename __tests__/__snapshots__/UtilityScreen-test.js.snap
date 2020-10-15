@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing Button Screen .js 1`] = `
+exports[`Testing Utility Screen .js 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   style={
@@ -25,6 +25,90 @@ exports[`Testing Button Screen .js 1`] = `
     Welcome - 
     Sukumar Abhijeet
   </Text>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 31.428571428571427,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 25.142857142857142,
+          "marginTop": 15.714285714285714,
+        }
+      }
+    >
+      Merging The objects
+    </Text>
+    <Text>
+      1st Object : 
+      {"test":"case1","value":50}
+       
+    </Text>
+    <Text>
+      2nd Object : 
+      {"name":"Investec","age":100}
+       
+    </Text>
+    <Text>
+      Results : 
+      {"test":"case1","value":50,"name":"Investec","age":100}
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 25.142857142857142,
+          "marginTop": 15.714285714285714,
+        }
+      }
+    >
+      Merging The Arrays
+    </Text>
+    <Text>
+      1st Array : 
+      [1,2,3,4,5]
+       
+    </Text>
+    <Text>
+      2nd Array : 
+      ["N1","N2","N3","N4","N5"]
+       
+    </Text>
+    <Text>
+      Results : 
+      [1,2,3,4,5,"N1","N2","N3","N4","N5"]
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 25.142857142857142,
+          "marginTop": 15.714285714285714,
+        }
+      }
+    >
+      Concatnation Of Strings | Numbers
+    </Text>
+    <Text>
+      1st 
+      number
+       : 
+      500
+       
+    </Text>
+    <Text>
+      2nd 
+      number
+       : 
+      300
+       
+    </Text>
+    <Text>
+      Results : 
+      800
+    </Text>
+  </View>
   <View
     style={
       Object {
@@ -94,7 +178,7 @@ exports[`Testing Button Screen .js 1`] = `
           "width": "100%",
         }
       }
-      testID="NavigateToLogin"
+      testID="NavigateToNative"
     >
       <Text
         style={
@@ -106,7 +190,7 @@ exports[`Testing Button Screen .js 1`] = `
           }
         }
       >
-        Check Login
+        Check Devices
       </Text>
     </View>
     <View
@@ -131,7 +215,7 @@ exports[`Testing Button Screen .js 1`] = `
           "width": "100%",
         }
       }
-      testID="NavigateToUtility"
+      testID="NavigateToLogin"
     >
       <Text
         style={
@@ -143,7 +227,7 @@ exports[`Testing Button Screen .js 1`] = `
           }
         }
       >
-        Check Utilities
+        Check Login
       </Text>
     </View>
   </View>
