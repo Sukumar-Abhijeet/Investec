@@ -7,18 +7,12 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import userReducer from './userReducer';
 import { persistCombineReducers } from 'redux-persist';
-import type {Reducer} from 'redux';
 import type {UserNameAction,State} from '../types/userTypes';
 
 const config = {
-    key: 'APPINESS',
+    key: 'INVESTEC',
     storage:AsyncStorage,
-    // blacklist: [
-    //     'netInfo',
-    // ],
 };
-
-type RootReducer = Reducer<State,UserNameAction>
 
 const AllReducers = {
     userData: userReducer
@@ -26,7 +20,7 @@ const AllReducers = {
 
 const appReducer = persistCombineReducers(config,AllReducers);
 
-const  rootReducer : RootReducer = (state : Object, action : UserNameAction) => {
+const  rootReducer  = (state : Object, action : UserNameAction) : State => {
     return appReducer(state, action);
 };
 
