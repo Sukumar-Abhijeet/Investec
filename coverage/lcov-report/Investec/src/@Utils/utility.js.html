@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">81.82% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/18</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">81.82% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -83,7 +83,8 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -94,21 +95,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//@flow
 /**
  * Create By @name Sukumar_Abhijeet,
@@ -121,20 +123,21 @@
  type MergedObjectType = {| ...ObjType1, ...ObjType2 |};
 &nbsp;
 export const mergeTwoObjects = ( obj1:ObjType1, obj2:ObjType2 ) : ?MergedObjectType =&gt; {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if(typeof obj1 === 'object' &amp;&amp; typeof obj2 === 'object')
+    
+    if((typeof obj1 === 'object' &amp;&amp; obj1!== null) &amp;&amp; (typeof obj2 === 'object' &amp;&amp; obj2!== null))
         return {...obj1,...obj2};
 };
 &nbsp;
 export const mergeTwoArrays = ( arr1:Array&lt;mixed&gt;, arr2:Array&lt;mixed&gt; ) : ?Array&lt;mixed&gt;  =&gt;{
-    <span class="missing-if-branch" title="else path not taken" >E</span>if(Array.isArray(arr1) &amp;&amp; Array.isArray(arr2))
+    if(Array.isArray(arr1) &amp;&amp; Array.isArray(arr2))
         return [...arr1,...arr2];
 };
 &nbsp;
 export const concatNumberAndString = (param1:number|string,param2:number|string) : ? (number | string) =&gt;{
-    <span class="missing-if-branch" title="else path not taken" >E</span>if(typeof param1 === 'number' &amp;&amp; typeof param2 === 'number')
+    if(typeof param1 === 'number' &amp;&amp; typeof param2 === 'number')
         return param1+param2;
-<span class="cstat-no" title="statement not covered" >    if((typeof param1 === 'string' || typeof param1 === 'number') &amp;&amp; (typeof param2 === 'string' || typeof param2 === 'number'))</span>
-<span class="cstat-no" title="statement not covered" >        return `${param1}+${param2}`;</span>
+    if((typeof param1 === 'string' || typeof param1 === 'number') &amp;&amp; (typeof param2 === 'string' || typeof param2 === 'number'))
+        return `${param1}${param2}`;
 };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -142,7 +145,7 @@ export const concatNumberAndString = (param1:number|string,param2:number|string)
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Oct 15 2020 20:21:48 GMT+0530 (India Standard Time)
+                at Fri Oct 16 2020 17:39:24 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

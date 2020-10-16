@@ -65,7 +65,6 @@ const UtilityScreen = ({...props} : Props) =>{
             );
         return null;
     };
-
     const renderConcatStringAndNumber = () =>{
         const mergedStrings = concatNumberAndString(param1,param2);
         if(mergedStrings)
